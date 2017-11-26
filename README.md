@@ -23,3 +23,16 @@ Click [here](https://github.com/StephenGrider/ReactStarter/releases) then downlo
 > npm install
 > npm start
 ```
+
+#### react-router 설치
+webBrowser > History > React-Router > React > webBrowser 
+```
+> npm install --save react-router@2.0.0-rc5
+```
+
+#### react-router 연결
+```
+import { Router, browserHistory } from 'react-router';
+...
+<Router history={browserHistory} />
+```
