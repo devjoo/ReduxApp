@@ -1,7 +1,11 @@
-const INITIAL_STATE = {}; // 스테이트 오브젝트 작성
+import { FETCH_POSTS } from '../actions/index';
+
+const INITIAL_STATE = { all: [], post: null }; // 스테이트 오브젝트 작성
 
 export default function (state = INITIAL_STATE, action) {
     switch (action.type){
+        case FETCH_POSTS:
+            return {...state, all: action.payload.data};
         default:
             return state;
     }
