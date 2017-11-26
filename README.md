@@ -31,8 +31,16 @@ webBrowser > History > React-Router > React > webBrowser
 ```
 
 #### react-router 연결
+... 진행중
 ```
 import { Router, browserHistory } from 'react-router';
 ...
 <Router history={browserHistory} />
+```
+
+
+
+#### axios와 redux-promise 설치
+```
+npm install --save axios redux-promise
 ```
