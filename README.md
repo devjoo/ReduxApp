@@ -39,8 +39,35 @@ import { Router, browserHistory } from 'react-router';
 ```
 
 
-
 #### axios와 redux-promise 설치
 ```
 npm install --save axios redux-promise
+```
+
+index.js
+```
+import promise from 'redux-promise';
+
+const createStoreWithMiddleware = applyMiddleware(
+    promise // 액션 > 프로미스된 미들웨어 > 리듀서 전달
+)(createStore);
+```
+reducers/index.js
+```
+import PostReducer from './reducer_posts';
+
+const rootReducer = combineReducers({
+  post: PostReducer
+});
+```
+reducer_posts.js
+```
+const INITIAL_STATE = {}; // 스테이트 오브젝트 작성
+
+export default function (state = INITIAL_STATE, action) {
+    switch (action.type){
+        default:
+            return state;
+    }
+}
 ```
