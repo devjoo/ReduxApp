@@ -32,7 +32,7 @@ webBrowser > History > React-Router > React > webBrowser
 
 #### react-router 연결
 ... 진행중
-```
+```js
 import { Router, browserHistory } from 'react-router';
 ...
 <Router history={browserHistory} />
@@ -45,7 +45,7 @@ npm install --save axios redux-promise
 ```
 
 + index.js
-```
+```js
 import promise from 'redux-promise';
 
 const createStoreWithMiddleware = applyMiddleware(
@@ -53,7 +53,7 @@ const createStoreWithMiddleware = applyMiddleware(
 )(createStore);
 ```
 + reducers/index.js
-```
+```js
 import PostReducer from './reducer_posts';
 
 const rootReducer = combineReducers({
@@ -61,7 +61,7 @@ const rootReducer = combineReducers({
 });
 ```
 + reducer_posts.js
-```
+```js
 const INITIAL_STATE = {}; // 스테이트 오브젝트 작성
 
 export default function (state = INITIAL_STATE, action) {
